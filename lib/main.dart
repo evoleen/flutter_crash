@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget with WidgetsBindingObserver {
-  const MyApp({Key? key}) : super(key: key) {
+  MyApp({Key? key}) : super(key: key) {
     WidgetsBinding.instance!.addObserver(this);
   }
 
